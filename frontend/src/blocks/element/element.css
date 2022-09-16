@@ -1,0 +1,7 @@
+.element {
+    max-width: 282px;
+    border-radius: 3%;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+}

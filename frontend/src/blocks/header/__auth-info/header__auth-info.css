@@ -1,0 +1,7 @@
+.header__auth-info {    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 33px;
+}

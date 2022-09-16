@@ -1,0 +1,14 @@
+.element__like {
+    background-image: url(../../../images/heart__disabled.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 22px;
+    height: 19px;
+    cursor: pointer;
+    border: none;
+}
+
+.element__like:hover {
+    opacity: 0.5;
+}

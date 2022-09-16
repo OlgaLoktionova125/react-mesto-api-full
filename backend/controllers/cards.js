@@ -7,15 +7,15 @@ const getCards = (req, res, next) => {
   Card.find({})
     .populate('owner')
     .then((cards) => {
-      res.send({ data: cards });
+      res.send(cards);
     })
     .catch(next);
 };
 
 const createCard = (req, res, next) => {
   const { name, link } = req.body;
-  Card.create({ name, link, owner: req.user._id })
-    .then((card) => res.send({ data: card }))
+  Card.create({ name, link, owner: req.user })
+    .then((card) => res.send(card))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         return next(new ValidationError('Введены некорректные данные'));
@@ -53,7 +53,7 @@ const likeCard = (req, res, next) => {
     .orFail(() => {
       throw new NotFoundError('Карточка не найдена');
     })
-    .then((card) => res.send({ data: card }))
+    .then((card) => res.send(card))
     .catch((err) => {
       if (err.name === 'CastError') {
         return next(new ValidationError('Некорректный id карточки'));
@@ -71,7 +71,7 @@ const dislikeCard = (req, res, next) => {
     .orFail(() => {
       throw new NotFoundError('Карточка не найдена');
     })
-    .then((card) => res.send({ data: card }))
+    .then((card) => res.send(card))
     .catch((err) => {
       if (err.name === 'CastError') {
         return next(new ValidationError('Некорректный id карточки'));

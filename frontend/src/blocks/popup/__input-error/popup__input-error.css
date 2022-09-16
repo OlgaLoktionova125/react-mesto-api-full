@@ -1,0 +1,17 @@
+.popup__input-error {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ff0000;
+    opacity: 0;
+    margin-left: 22px;
+    margin-right: 22px;
+    display: block;
+}
+
+@media (min-width: 890px) {
+    .popup__input-error {
+        margin-right: 36px;
+        margin-left: 36px;
+    }
+}
