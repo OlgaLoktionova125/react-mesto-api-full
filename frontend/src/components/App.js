@@ -33,12 +33,14 @@ function App() {
 
   useEffect(() => {
     checkToken();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (loggedIn) {
         history.push("/")
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loggedIn]);
 
   function closeAllPopups() {
@@ -239,7 +241,7 @@ function App() {
               <Login onLogin={onLogin}/>
             </Route>
             <Route path="*">
-              {loggedIn ? <Redirect to="/" /> : <Redirect to="/sign-in" />}
+              {loggedIn ? <Redirect to="/" /> : <Redirect to="/sign-up" />}
             </Route>
           </Switch> 
           <EditProfilePopup 
