@@ -1,5 +1,11 @@
 .popup__infoTooltipImg{
     width: 120px;
     height: 120px;
-    margin: 60px 155px 32px 155px;
+    margin: 50px 80px 40px 80px;
+}
+
+@media (min-width: 890px) {
+    .popup__infoTooltipImg {
+        margin: 60px 155px 32px 155px;
+    }
 }
